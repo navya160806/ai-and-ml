@@ -11,6 +11,7 @@ VECTORIZER_LOCATION=['models/count_vectorizer.joblib','count_vectorizer.joblib']
 def find_first(paths):
     for path in paths:
         if os.path.exists (path):
+            
             return path
     raise FileNotFoundError ("No valid path found in the list.")
 
