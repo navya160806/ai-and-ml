@@ -4,6 +4,7 @@ import streamlit as st
 from joblib import load
 
 MODEL_LOCATION=['models/nb_model.joblib','nb_model.joblib'] #path and filename of the model
+
 VECTORIZER_LOCATION=['models/count_vectorizer.joblib','count_vectorizer.joblib'] #path and filename of the vectorizer
 
 #goes thropugh the list of path 
