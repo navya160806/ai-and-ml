@@ -11,7 +11,7 @@ VECTORIZER_LOCATION=['models/count_vectorizer.joblib','count_vectorizer.joblib']
 def find_first(paths):
     for path in paths:
         if os.path.exists (path):
-            
+
             return path
     raise FileNotFoundError ("No valid path found in the list.")
 
@@ -26,6 +26,7 @@ if model_path and vect_path:
     try:
         model=load (model_path)
         vectorizer=load (vect_path)
+        
         st.sidebar.success (f"Model and Vectorizer loaded successfully!'{os.path.basename (model_path)}'and'{os.path.basename (vect_path)}'")
     except Exception as e:
         st.sidebar.error (f"Error loading model or vectorizer: {e}")
